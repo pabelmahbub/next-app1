@@ -17,7 +17,7 @@ function PostDetails({post}) {
   )
 }
 
-
+//SSG:
 export const getStaticProps = async (context) =>{
 
     const {params} = context;
@@ -32,7 +32,7 @@ export const getStaticProps = async (context) =>{
     }
 }
 
-
+//SSG:
 export const getStaticPaths = async()=>{
     const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
     const posts = await res.json();
